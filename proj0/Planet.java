@@ -55,7 +55,9 @@ public class Planet {
         double Forcey = Force * dy / dis;
         return Forcey;
     }
-
+    public void draw(){
+        StdDraw.picture(xxPos, yyPos, imgFileName);
+    }
 //
 //    public Double calcForceExertedByX(Planet p){
 //        Planet temp = p;
