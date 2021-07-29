@@ -33,6 +33,9 @@ public class NBody {
         double radius = readRadius(filename);
         Planet[] planets = readPlanets(filename);
 
+        double[] audio = StdAudio.read("audio/2001.mid");
+        StdAudio.play(audio);
+//        StdAudio.loop("audio/2001.mid");
         StdDraw.enableDoubleBuffering();
 
         StdDraw.setScale(-radius, radius);
@@ -58,6 +61,7 @@ public class NBody {
                 planets[i].update(dt, xForces[i], yForces[i]);
             }
 
+
 //            StdDraw.clear();
             StdDraw.picture(0, 0, "images/starfield.jpg");
             for (Planet p : planets) {
@@ -77,5 +81,6 @@ public class NBody {
             }
 
         }
+//        StdAudio.close();
     }
 }
